@@ -43,7 +43,8 @@ export default ({ config, db }) =>
 
     /** DELETE /:id - Delete a given entity */
     delete({ fish }, res) {
-      fishes.splice(fishes.indexOf(fish), 1);
+      const fishIdToDelete = res.req.params.fish;
+      delete fishes[fishIdToDelete];
       res.sendStatus(204);
     },
   });

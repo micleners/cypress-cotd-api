@@ -1,12 +1,12 @@
 import { version } from '../../package.json';
 import { Router } from 'express';
-import facets from './facets';
+import fish from './fish';
 
 export default ({ config, db }) => {
   let api = Router();
 
-  // mount the facets resource
-  api.use('/fish', facets({ config, db }));
+  // mount the fish resource
+  api.use('/fish', fish({ config, db }));
 
   // perhaps expose some API metadata at the root
   api.get('/', (req, res) => {
