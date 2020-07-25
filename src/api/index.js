@@ -5,6 +5,8 @@ import fish from './fish';
 export default ({ config, db }) => {
   let api = Router();
 
+  api.get('api/reset', (req, res) => {});
+
   // mount the fish resource
   api.use('/fish', fish({ config, db }));
 
