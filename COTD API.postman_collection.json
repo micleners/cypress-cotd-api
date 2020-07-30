@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "148cadce-d8f2-4cff-b0e5-fa67855e747c",
+		"name": "COTD API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllFish",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-dataitem",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "machine-id",
+							"value": "GM003",
+							"type": "text"
+						},
+						{
+							"key": "technician-id",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/imtapps/Downloads/file.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/fish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFish",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-dataitem",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "machine-id",
+							"value": "GM003",
+							"type": "text"
+						},
+						{
+							"key": "technician-id",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/imtapps/Downloads/file.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/fish/fish1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fish",
+						"fish1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostFish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-dataitem",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"feesh\",\n    \"image\": \"/images/feesh.jpg\",\n    \"desc\": \"Everyone loves feesh.\",\n    \"price\": 99,\n    \"status\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/fish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateFish",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"updatedFeesh\",\n    \"image\": \"/images/feesh.jpg\",\n    \"desc\": \"Everyone loves feesh.\",\n    \"price\": 99,\n    \"status\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/fish/fish1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fish",
+						"fish1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
