@@ -40,7 +40,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/fish",
+					"raw": "http://localhost:8080/api/fish/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -48,7 +48,8 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"fish"
+						"fish",
+						""
 					]
 				}
 			},
@@ -89,7 +90,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/fish/fish1",
+					"raw": "http://localhost:8080/api/fish/fish2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -98,7 +99,7 @@
 					"path": [
 						"api",
 						"fish",
-						"fish1"
+						"fish2"
 					]
 				}
 			},
@@ -153,6 +154,53 @@
 							"language": "json"
 						}
 					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/fish/fish1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"fish",
+						"fish1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteFish",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-dataitem",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "machine-id",
+							"value": "GM003",
+							"type": "text"
+						},
+						{
+							"key": "technician-id",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/imtapps/Downloads/file.txt"
+						}
+					]
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/fish/fish1",
